@@ -25,16 +25,13 @@ public class NewTest2 {
 	@Test
 	public void launchfirefox()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\chromedriver\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
                 driver=new ChromeDriver();
 		driver.get("http://newtours.demoaut.com/");
 		driver.manage().window().maximize();
-		
 		driver.findElement(By.name("userName")).sendKeys("tutorial");
 		driver.findElement(By.name("password")).sendKeys("tutorial");
-		driver.findElement(By.name("login")).click();
-		
-				
+		driver.findElement(By.name("login")).click();				
 	}
 	@AfterMethod
 	public void aftermethod()
